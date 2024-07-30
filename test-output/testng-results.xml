@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-23T22:36:43 GMT+07:00" name="Default suite" finished-at="2024-07-23T22:36:43 GMT+07:00" duration-ms="70">
+  <suite started-at="2024-07-30T23:22:17 GMT+07:00" name="Default suite" finished-at="2024-07-30T23:22:33 GMT+07:00" duration-ms="16459">
     <groups>
     </groups>
-    <test started-at="2024-07-23T22:36:43 GMT+07:00" name="Default test" finished-at="2024-07-23T22:36:43 GMT+07:00" duration-ms="70">
-      <class name="automation.testsuite.Day7_Test">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automation.testsuite.Day7_Test@7c711375]" started-at="2024-07-23T22:36:43 GMT+07:00" name="openBrowser" finished-at="2024-07-23T22:36:43 GMT+07:00" duration-ms="7" status="PASS">
+    <test started-at="2024-07-30T23:22:17 GMT+07:00" name="Default test" finished-at="2024-07-30T23:22:33 GMT+07:00" duration-ms="16459">
+      <class name="automation.testsuite.Day8_Practice3">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:automation.testsuite.Day8_Practice3@434a63ab]" started-at="2024-07-30T23:22:17 GMT+07:00" name="openBrowser" finished-at="2024-07-30T23:22:33 GMT+07:00" duration-ms="16310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="TestCase_1()[pri:0, instance:automation.testsuite.Day7_Test@7c711375]" started-at="2024-07-23T22:36:43 GMT+07:00" name="TestCase_1" finished-at="2024-07-23T22:36:43 GMT+07:00" duration-ms="10" status="PASS">
+        <test-method signature="findElementBy()[pri:0, instance:automation.testsuite.Day8_Practice3@434a63ab]" started-at="2024-07-30T23:22:33 GMT+07:00" name="findElementBy" finished-at="2024-07-30T23:22:33 GMT+07:00" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_1 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:automation.testsuite.Day7_Test@7c711375]" started-at="2024-07-23T22:36:43 GMT+07:00" name="closeBrowser" finished-at="2024-07-23T22:36:43 GMT+07:00" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- automation.testsuite.Day7_Test -->
+        </test-method> <!-- findElementBy -->
+      </class> <!-- automation.testsuite.Day8_Practice3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
