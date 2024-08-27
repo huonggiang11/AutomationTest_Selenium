@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day12_btvn">
+      <class name="automation.page.SigninTest_day14">
         <methods>
-          <include name="case2_CheckSelectHosting"/>
           <include name="openChrome"/>
+          <include name="editPassword"/>
         </methods>
-      </class> <!-- automation.testsuite.Day12_btvn -->
+      </class> <!-- automation.page.SigninTest_day14 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
