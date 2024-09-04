@@ -24,7 +24,7 @@ public class SigninTest_day14 extends CommonBase{
 	public void signinSuccessfully() throws InterruptedException {
 		signin = new SigninPage_day14(driver);
 		signin.SigninFunction("Huong Giang8", "hgiang118@gmail.com", "hgiang118@gmail.com","hgiang11", "hgiang11", "0971522968");
-		Thread.sleep(5000);
+		Thread.sleep(100000);
 		assertTrue(driver.findElement(By.xpath("(//a[text()='Khóa học của tôi'])[1]")).isDisplayed());
 	}
 	@Test
@@ -34,12 +34,11 @@ public class SigninTest_day14 extends CommonBase{
 		assertTrue(driver.findElement(By.xpath("(//a[text()='Khóa học của tôi'])[1]")).isDisplayed());
 		signin = new SigninPage_day14(driver);
 		signin.Login_information("hgiang11", "hgiang11a", "hgiang11a");
-		driver.switchTo().alert().accept();
 	}
 	@Test
 	public void LoginSuccessfully() {
 		Login = new LoginPage_day14(driver);
-		Login.LoginFunction("hgiang116@gmail.com", "hgiang11");
+		Login.LoginFunction("hgiang116@gmail.com", "hgiang11a");
 		assertTrue(driver.findElement(By.xpath("(//a[text()='Khóa học của tôi'])[1]")).isDisplayed());
 	}
 }

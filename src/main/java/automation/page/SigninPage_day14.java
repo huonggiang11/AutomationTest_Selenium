@@ -38,7 +38,7 @@ public class SigninPage_day14 {
 	}
 	
 	public void Login_information(String Passnow,String Passnew, String ConfirmPassnew) {
-		btnAVT.;
+		btnAVT.click();
 		btnEditInfor.click();
 		textPassnow.sendKeys(Passnow);
 		textPassnew.sendKeys(Passnew);
