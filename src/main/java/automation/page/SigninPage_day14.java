@@ -15,7 +15,7 @@ public class SigninPage_day14 {
 	@FindBy(id = "txtPhone") WebElement textPhone;
 	@FindBy(xpath = "//button[text()= 'ĐĂNG KÝ' and @type='submit']") WebElement btnDangky;
 	
-	@FindBy(xpath = "//div[@class='avatar2']']") WebElement btnAVT;
+	@FindBy(xpath = "//div[@class='avatar2']") WebElement btnAVT;
 	@FindBy(xpath = "//a[text()='Chỉnh sửa thông tin']") WebElement btnEditInfor;
 	@FindBy(xpath = "//input[@placeholder='Mật khẩu hiện tại']")WebElement textPassnow;
 	@FindBy(id = "txtnewpass") WebElement  textPassnew;
