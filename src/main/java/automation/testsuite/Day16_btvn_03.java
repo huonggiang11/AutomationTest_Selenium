@@ -12,9 +12,12 @@ import automation.constant.CT_PageURLs;
 public class Day16_btvn_03 extends CommonBase{
 	
 	@BeforeMethod
-	public void openChrome()
+	@Parameters("browser")
+	public void openChrome(String browser)
 	{
-		driver = initFirefoxDriver(CT_PageURLs.URL_GURU99DELETE);
+		setupDriver(browser);
+		driver.get(CT_PageURLs.URL_GURU99DELETE);
+		//driver = initMSEdgeDriver(CT_PageURLs.URL_GURU99DELETE);
 	}
 	
 	@Test

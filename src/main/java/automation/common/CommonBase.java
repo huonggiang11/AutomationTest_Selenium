@@ -1,6 +1,9 @@
 package automation.common;
 
 import java.time.Duration;
+import java.util.List;
+
+import javax.lang.model.element.Element;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Pause;
@@ -37,6 +42,35 @@ public class CommonBase {
 		driver.manage().window().maximize();
 		driver.get(URL);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+	public WebDriver initMSEdgeDriver(String URL) {
+		EdgeOptions options = new EdgeOptions();
+		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");
+		driver = new EdgeDriver(options);
+		driver.manage().window().maximize();
+		driver.get(URL);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+	
+	public WebDriver setupDriver(String browserName) {
+		switch (browserName.trim().toLowerCase())
+		{
+		case "chrome": 
+			initChromeDriver();
+		break;
+		case "firefox": 
+			initFirefoxDriver();
+		break;
+		case "edge":
+			initMSEdgeDriver();
+		break;
+		default:
+			System.out.println("The browser name "+ browserName + " is invalid, run Chrome as defaul option");
+			initChromeDriver();
+			break;
+		}
 		return driver;
 	}
 	
@@ -81,8 +115,8 @@ public class CommonBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 		element.click();
-	}
-
+	}	
+	
 	public void type(By locator, String value) {
 		WebElement element = getElementPresentDOM(locator);
 		element.sendKeys(value);
@@ -128,6 +162,31 @@ public class CommonBase {
 		{
 			return false;
 		}
+	}
+	
+	private WebDriver initChromeDriver() {
+		ChromeOptions options = new ChromeOptions();
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+		driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+	private WebDriver initFirefoxDriver() {
+		FirefoxOptions options = new FirefoxOptions();
+		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
+		driver = new FirefoxDriver(options);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+	private WebDriver initMSEdgeDriver() {
+		EdgeOptions options = new EdgeOptions();
+		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");
+		driver = new EdgeDriver(options);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
 	}
 }
 

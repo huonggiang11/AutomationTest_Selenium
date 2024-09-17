@@ -12,7 +12,7 @@ public class Day16_btvn_02 extends CommonBase {
 	@BeforeMethod
 	public void openChrome()
 	{
-		driver = initFirefoxDriver(CT_PageURLs.URL_SELENIUMPRACTISE);
+		driver = initMSEdgeDriver(CT_PageURLs.URL_SELENIUMPRACTISE);
 	}
 	
 	@Test
